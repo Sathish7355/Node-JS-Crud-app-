@@ -1,0 +1,27 @@
+<h2>Edit Student Deatils</h2>
+{{#if msg}}
+<div class="alert">{{msg}}</div>
+{{/if}}
+{{#each rows}}
+
+<form method="post" action="/edituser/{{this.Id}}">
+<div class="form_grop">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{this.Name}}">
+</div>
+<div class="form_grop">
+    <label for="age">Age</label>
+    <input type="text" name="age" value="{{this.Age}}">
+</div>
+<div class="form_grop">
+    <label for="city">City</label>
+    <input type="text" name="city" value="{{this.City}}">
+</div>
+
+<div class="form_grop">
+    <button type="submit">Save Changes</button>
+    <a href="/"> View All</a>
+</div>
+    
+</form>
+{{/each}}
