@@ -20,10 +20,13 @@ app.set("view engine", "hbs");
 
 
 
+
   const routes= require("./server/routes/students")
   app.use("/",routes)
 
 
+console.log("DB_USER =", process.env.DB_USER)
+console.log("DB_PASS =", process.env.DB_PASSWORD)
 app.listen(4000, () => {
   console.log("Server is running on port 4000");
 });
